@@ -21,7 +21,7 @@ export default function Skills() {
     <PageContainer>
       <div className="flex justify-between w-full">
         <NavigationViewer data={[{ prefix: "Habilidades", href: "/skills" }]} />
-        <Link href={"/projetos"} className="md:hidden">
+        <Link href={"/projetos"} className="">
           <ArrowRightCircle className="" />
         </Link>
       </div>
@@ -76,7 +76,7 @@ export default function Skills() {
           </TabsContent>
         </Tabs>
       </SectionContainer>
-      <NextPage next="Serviços" link={"/projetos"} />
+      {/* <NextPage next="Serviços" link={"/projetos"} /> */}
     </PageContainer>
   );
 }

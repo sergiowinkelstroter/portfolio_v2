@@ -12,7 +12,7 @@ export default function Sobre() {
         <NavigationViewer
           data={[{ prefix: "Sobre Mim", href: "/sobre-mim" }]}
         />
-        <Link href={"/skills"} className="md:hidden">
+        <Link href={"/skills"} className="">
           <ArrowRightCircle className="" />
         </Link>
       </div>
@@ -50,7 +50,7 @@ export default function Sobre() {
           </div>
         </div>
       </SectionContainer>
-      <NextPage next="Habilidades" link={"/skills"} />
+      {/* <NextPage next="Habilidades" link={"/skills"} /> */}
     </PageContainer>
   );
 }

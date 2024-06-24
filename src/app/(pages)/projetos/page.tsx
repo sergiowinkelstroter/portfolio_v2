@@ -24,7 +24,7 @@ export default function Servicos() {
     <PageContainer>
       <div className="flex justify-between w-full">
         <NavigationViewer data={[{ prefix: "Projetos", href: "/projetos" }]} />
-        <Link href={"/contatos"} className="md:hidden">
+        <Link href={"/contatos"} className="">
           <ArrowRightCircle className="" />
         </Link>
       </div>
@@ -63,7 +63,7 @@ export default function Servicos() {
           Ver mais
         </Link>
       </SectionContainer>
-      <NextPage next="Contatos" link={"/contatos"} />
+      {/* <NextPage next="Contatos" link={"/contatos"} /> */}
     </PageContainer>
   );
 }
