@@ -14,87 +14,6 @@ export default function Contatos() {
       <SectionContainer>
         <h1 className="text-3xl font-bold text-center">Contatos</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16 w-full">
-          {/* <form
-            action="mailto:winksousa0@gmail.com"
-            method="post"
-            encType="text/plain"
-            className="flex-1"
-          >
-            <h3 className="text-xl font-bold mb-8">Enviar uma mensagem</h3>
-
-            <div className="mb-4">
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Nome
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                htmlFor="subject"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Assunto
-              </label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                required
-                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Mensagem
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={4}
-                required
-                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              ></textarea>
-            </div>
-            <div className="text-center flex justify-end">
-              <Button type="submit" className="">
-                Enviar
-              </Button>
-            </div>
-          </form> */}
-          <Image
-            src="/contato.png"
-            alt=""
-            width={800}
-            height={800}
-            className="hidden md:block"
-          />
           <div className="flex flex-col  items-center">
             <h3 className="text-xl font-bold">Informações de contato</h3>
             <div className="flex flex-col gap-4 mt-8">
@@ -147,6 +66,13 @@ export default function Contatos() {
               </div>
             </div>
           </div>
+          <Image
+            src="/contato.png"
+            alt=""
+            width={800}
+            height={800}
+            className="hidden md:block"
+          />
         </div>
       </SectionContainer>
     </PageContainer>
