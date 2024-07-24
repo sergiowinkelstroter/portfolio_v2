@@ -2,6 +2,7 @@ import { NavigationViewer } from "@/components/NavigationViewer";
 import { NextPage } from "@/components/NextPage";
 import { PageContainer } from "@/components/PageContainer";
 import { SectionContainer } from "@/components/SectionContainer";
+import { Button } from "@/components/ui/button";
 import { ArrowRightCircle } from "lucide-react";
 import Link from "next/link";
 
@@ -24,29 +25,40 @@ export default function Sobre() {
               <span className="text-[100px] font-bold">S</span>
             </div>
           </div>
-          <div className="flex-1">
+          <div className="flex-1 flex justify-center items-center flex-col">
             <p className="text-justify">
-              Desenvolvedor Full-Stack com experiência em Node.js, React.js,
-              Next.js e TailwindCSS, cursando Sistemas para Internet. Atuo como
-              freelancer, criando soluções personalizadas desde interfaces
-              intuitivas até back-ends escaláveis. Sempre em busca de novos
-              desafios e oportunidades para crescer.
+              Sou um desenvolvedor Full-Stack apaixonado por criar soluções
+              digitais que fazem a diferença. Atualmente, estou cursando
+              Sistemas para Internet e tenho experiência prática com Node.js,
+              React.js, Next.js e TailwindCSS. Como freelancer, tenho a
+              oportunidade de transformar ideias em realidade, trabalhando desde
+              a concepção de interfaces intuitivas até o desenvolvimento de
+              back-ends robustos e escaláveis.
             </p>
-            <p className="text-justify mt-4">
+            {/* <p className="text-justify mt-4">
               Ao longo da minha jornada como freelancer, desenvolvi uma forte
               compreensão das melhores práticas de desenvolvimento e um olhar
               atento para design. Trabalho constantemente para entregar projetos
               que não apenas atendam, mas superem as expectativas dos meus
               clientes, independentemente do tamanho ou escopo do projeto.
-            </p>
-            <p className="text-justify mt-4">
+            </p> */}
+            {/* <p className="text-justify mt-4">
               Valorizo a comunicação clara e eficaz, acreditando que a
               colaboração próxima com clientes é essencial para o sucesso de
               qualquer projeto. Estou sempre em busca de novos desafios e
               oportunidades para crescer, tanto profissionalmente quanto
               pessoalmente, mantendo-me atualizado com as últimas tendências e
               tecnologias do setor.
-            </p>
+            </p> */}
+            <div className="flex w-full font-medium text-center">
+              <a
+                download={"CV.pdf"}
+                href="/cv.pdf"
+                className="mt-6 bg-primary text-white px-4 py-2 rounded-md w-full "
+              >
+                Saiba mais
+              </a>
+            </div>
           </div>
         </div>
       </SectionContainer>
