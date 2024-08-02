@@ -47,7 +47,7 @@ export default function Servicos() {
                 />
                 <Drawer>
                   <DrawerTrigger asChild>
-                    <Button className="w-full">Saiba mais</Button>
+                    <Button className="w-full bg-foreground">Saiba mais</Button>
                   </DrawerTrigger>
                   <ProjetoDrawer projeto={pj} />
                 </Drawer>

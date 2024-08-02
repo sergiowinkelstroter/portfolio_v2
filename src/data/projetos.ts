@@ -24,9 +24,17 @@ export const projetos = [
   },
   {
     title: "C&S Serviços",
-    description: "Em desenvolvimento🏗️",
-    link: "",
+    description:
+      "Sistema de agendamento de serviços gerais para a empresa C&S Serviços. Este sistema permite que clientes agendem serviços diretamente com a empresa, que gerencia a alocação dos prestadores de serviço. O sistema inclui funcionalidades de autenticação e autorização, gestão de agendamentos, além de uma página de configurações para personalização e um painel administrativo para controle total das operações.",
+    link: "https://csservicos.online",
     image: "/projetos/csservicos.png",
-    tecs: [],
+    tecs: [
+      "Typescript",
+      "Next.js",
+      "Node.js",
+      "TailwindCSS",
+      "PostgreSQL",
+      "Prisma",
+    ],
   },
 ];
