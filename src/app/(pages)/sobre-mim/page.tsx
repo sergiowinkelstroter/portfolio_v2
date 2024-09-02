@@ -27,13 +27,11 @@ export default function Sobre() {
           </div>
           <div className="flex-1 flex justify-center items-center flex-col">
             <p className="text-justify">
-              Sou um desenvolvedor Full-Stack apaixonado por criar soluções
-              digitais que fazem a diferença. Atualmente, estou cursando
-              Sistemas para Internet e tenho experiência prática com Node.js,
-              React.js, Next.js e TailwindCSS. Como freelancer, tenho a
-              oportunidade de transformar ideias em realidade, trabalhando desde
-              a concepção de interfaces intuitivas até o desenvolvimento de
-              back-ends robustos e escaláveis.
+              Desenvolvedor Full-Stack com experiência em Node.js, React.js,
+              Next.js e TailwindCSS, cursando Sistemas para Internet. Atualmente
+              atuo como freelancer, criando soluções personalizadas desde
+              interfaces intuitivas até back-ends escaláveis. Sempre em busca de
+              novos desafios e oportunidades para crescer.
             </p>
             {/* <p className="text-justify mt-4">
               Ao longo da minha jornada como freelancer, desenvolvi uma forte
