@@ -38,13 +38,15 @@ export default function Servicos() {
                 <CardTitle>{pj.title}</CardTitle>
               </CardHeader>
               <CardContent className="flex flex-col gap-4 items-center">
-                <Image
-                  alt=""
-                  src={pj.image}
-                  width={350}
-                  height={350}
-                  className="rounded-lg"
-                />
+                <div className="w-[350px] h-[350px] rounded-lg bg-red-500 flex justify-center items-center">
+                  <Image
+                    alt=""
+                    src={pj.image}
+                    width={350}
+                    height={350}
+                    className="rounded-lg"
+                  />
+                </div>
                 <Drawer>
                   <DrawerTrigger asChild>
                     <Button className="w-full bg-foreground">Saiba mais</Button>

@@ -18,20 +18,22 @@ interface DrawerContentProps {
 export function ProjetoDrawer({ projeto }: DrawerContentProps) {
   return (
     <DrawerContent className="bg-gray-200">
-      <div className="mx-auto w-full max-w-sm">
+      <div className="mx-auto w-full md:max-w-xl xl:max-w-2xl">
         <DrawerHeader>
           <DrawerTitle>{projeto.title}</DrawerTitle>
         </DrawerHeader>
         <div className="p-4 pb-0">
           <div className="flex flex-col  gap-4 justify-center space-x-2">
             <div className="flex  justify-center">
-              <Image
-                alt=""
-                src={projeto.image}
-                width={150}
-                height={150}
-                className="rounded-lg "
-              />
+              <div className="w-[150px] h-[150px] bg-red-500 rounded-lg">
+                <Image
+                  alt=""
+                  src={projeto.image}
+                  width={150}
+                  height={150}
+                  className="rounded-lg "
+                />
+              </div>
             </div>
             <p className="text-justify text-muted-foreground text-sm">
               {projeto.description}

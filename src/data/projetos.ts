@@ -15,12 +15,20 @@ export const projetos = [
     ],
   },
   {
-    title: "Embala Brasil",
+    title: "Waiter APP",
     description:
-      "Landing page da Embala Brasil, uma loja especializada em embalagens. O projeto destaca a variedade de produtos disponíveis, além de fornecer informações de contato e horários de funcionamento. A página foi criada com foco na usabilidade e na apresentação visual, garantindo uma experiência intuitiva e informativa para os clientes.",
-    link: "https://embalabrasil-page.vercel.app/",
-    image: "/projetos/embala.png",
-    tecs: ["Typescript", "Next.js", "TailwindCSS"],
+      "Waiter APP é um sistema projetado para facilitar a interação entre a equipe de garçons e a cozinha. Com ele, os garçons podem registrar e gerenciar pedidos diretamente de seus dispositivos, e a cozinha recebe as solicitações em tempo real, otimizando o fluxo de trabalho e reduzindo erros. Esse sistema melhora a comunicação entre as equipes, garantindo que os pedidos sejam atendidos de maneira rápida e organizada.",
+    link: "https://waiterapp.cloud/",
+    image: "/projetos/logo.png",
+    tecs: [
+      "Typescript",
+      "React.js",
+      "Styled Components",
+      "Mongodb",
+      "Node.js",
+      "Socket.io",
+      "Express",
+    ],
   },
   {
     title: "C&S Serviços",
