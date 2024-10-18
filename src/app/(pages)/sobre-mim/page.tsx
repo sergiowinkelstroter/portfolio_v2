@@ -27,11 +27,12 @@ export default function Sobre() {
           </div>
           <div className="flex-1 flex justify-center items-center flex-col">
             <p className="text-justify">
-              Desenvolvedor Full-Stack com experiência em Node.js, React.js,
-              Next.js e TailwindCSS, cursando Sistemas para Internet. Atualmente
-              atuo como freelancer, criando soluções personalizadas desde
-              interfaces intuitivas até back-ends escaláveis. Sempre em busca de
-              novos desafios e oportunidades para crescer.
+              Desenvolvedor Full-Stack com experiência em Java, Spring Boot,
+              React.js, Next.js, TailwindCSS e muito mais. Formado em Sistemas
+              para Internet. Atualmente atuo como freelancer, criando soluções
+              personalizadas desde interfaces intuitivas até back-ends
+              escaláveis. Sempre em busca de novos desafios e oportunidades para
+              crescer.
             </p>
             {/* <p className="text-justify mt-4">
               Ao longo da minha jornada como freelancer, desenvolvi uma forte

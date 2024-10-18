@@ -1,12 +1,10 @@
-import { FaHtml5 } from "react-icons/fa";
+import { FaDatabase, FaHtml5, FaJava } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { FaJs } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
-import { SiTypescript } from "react-icons/si";
+import { SiSpringboot, SiSpringsecurity, SiTypescript } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { FaNodeJs } from "react-icons/fa";
-import { SiExpress } from "react-icons/si";
 import { SiPrisma } from "react-icons/si";
 import { FaDocker } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
@@ -50,16 +48,20 @@ export const skills = [
     title: "Back-end",
     items: [
       {
-        title: "Node.js",
-        icon: FaNodeJs,
+        title: "Java",
+        icon: FaJava,
       },
       {
-        title: "Express",
-        icon: SiExpress,
+        title: "Spring Boot",
+        icon: SiSpringboot,
       },
       {
-        title: "Prisma",
-        icon: SiPrisma,
+        title: "Spring Data JPA",
+        icon: FaDatabase,
+      },
+      {
+        title: "Spring Security",
+        icon: SiSpringsecurity,
       },
       {
         title: "Docker",

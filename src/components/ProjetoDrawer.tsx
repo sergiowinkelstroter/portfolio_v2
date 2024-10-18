@@ -25,7 +25,9 @@ export function ProjetoDrawer({ projeto }: DrawerContentProps) {
         <div className="p-4 pb-0">
           <div className="flex flex-col  gap-4 justify-center space-x-2">
             <div className="flex  justify-center">
-              <div className="w-[150px] h-[150px] bg-red-500 rounded-lg">
+              <div
+                className={`w-[150px] h-[150px] flex justify-center items-center  rounded-lg ${projeto.color}`}
+              >
                 <Image
                   alt=""
                   src={projeto.image}

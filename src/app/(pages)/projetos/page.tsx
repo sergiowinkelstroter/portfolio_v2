@@ -17,6 +17,7 @@ export interface Projeto {
   link: string;
   image: string;
   tecs: string[];
+  color: string;
 }
 
 export default function Servicos() {
@@ -38,7 +39,9 @@ export default function Servicos() {
                 <CardTitle>{pj.title}</CardTitle>
               </CardHeader>
               <CardContent className="flex flex-col gap-4 items-center">
-                <div className="w-[350px] h-[350px] rounded-lg bg-red-500 flex justify-center items-center">
+                <div
+                  className={`w-[350px] h-[350px] rounded-lg ${pj.color}  flex justify-center items-center`}
+                >
                   <Image
                     alt=""
                     src={pj.image}
