@@ -3,7 +3,14 @@ import { NextPage } from "@/components/NextPage";
 import { PageContainer } from "@/components/PageContainer";
 import { SectionContainer } from "@/components/SectionContainer";
 import { Card } from "@/components/ui/card";
-import { Briefcase, Github, Linkedin, Mail, Wrench } from "lucide-react";
+import {
+  Briefcase,
+  Github,
+  Instagram,
+  Linkedin,
+  Mail,
+  Wrench,
+} from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -39,6 +46,15 @@ export default function Home() {
                   rel="noreferrer"
                 >
                   <Linkedin size={28} />
+                </a>
+              </li>
+              <li className="">
+                <a
+                  href="https://www.instagram.com/sergiowinkelstroter.dev/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Instagram size={28} />
                 </a>
               </li>
             </ul>

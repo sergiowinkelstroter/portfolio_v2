@@ -70,7 +70,7 @@ export const Header = () => {
           </Link>
           <Link
             target="_blank"
-            href="https://www.instagram.com/winkelstrotersergio/"
+            href="https://www.instagram.com/sergiowinkelstroter.dev/"
           >
             <Instagram className="w-4 h-4 text-muted-foreground" />
           </Link>
