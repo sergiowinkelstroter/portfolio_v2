@@ -16,22 +16,6 @@ export const projetos = [
     color: "bg-black",
   },
   {
-    title: "Gestão de Vagas API",
-    description:
-      "Uma API REST abrangendo o controle de empresas, vagas de emprego e aplicações. O projeto faz uso dos principais pacotes do Spring Boot para persistência de dados, implementação de segurança e autorização. A aplicação permite a criação, leitura, atualização e exclusão de registros relacionados a empresas, vagas de emprego e candidaturas, proporcionando uma solução completa para o gerenciamento de recursos humanos.",
-    tecs: [
-      "Java",
-      "Spring Boot",
-      "Spring Security",
-      "Spring Data JPA",
-      "PostGreSQL",
-      "Swagger",
-    ],
-    image: "/projetos/java_spring.jpg",
-    link: "https://github.com/sergiowinkelstroter/gestao_vagas_api",
-    color: "bg-black",
-  },
-  {
     title: "C&S Serviços",
     description:
       "Sistema de agendamento de serviços gerais para a empresa C&S Serviços. Este sistema permite que clientes agendem serviços diretamente com a empresa, que gerencia a alocação dos prestadores de serviço. O sistema inclui funcionalidades de autenticação e autorização, gestão de agendamentos, além de uma página de configurações para personalização e um painel administrativo para controle total das operações.",
@@ -46,15 +30,6 @@ export const projetos = [
       "Prisma",
     ],
     color: "bg-blue-900",
-  },
-  {
-    title: "Scale Generator API",
-    description:
-      "Este projeto é uma implementação de um gerador de escalas de trabalho, onde é possível cadastrar escalas associadas a um título específico, mês, ano e um conjunto de dias da semana. ",
-    link: "https://github.com/sergiowinkelstroter/scale_generator",
-    image: "/projetos/java_spring.jpg",
-    tecs: ["Java", "Spring Boot", "Spring JPA", "Lombok", "PostgreSQL"],
-    color: "bg-black",
   },
   {
     title: "Waiter APP",
@@ -72,13 +47,5 @@ export const projetos = [
       "Express",
     ],
     color: "bg-red-500",
-  },
-  {
-    title: "Todo List API",
-    description: "API para gerenciar tarefas (CRUD) ",
-    link: "https://github.com/sergiowinkelstroter/api_todo_list",
-    image: "/projetos/java_spring.jpg",
-    tecs: ["Java", "Spring Boot", "Spring Data JPA", "PostGreSQL", "Swagger"],
-    color: "bg-black",
   },
 ];
