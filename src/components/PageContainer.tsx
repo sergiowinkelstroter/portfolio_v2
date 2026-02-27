@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 export const PageContainer = ({ children }: { children: ReactNode }) => {
   return (
-    <main className="relative min-h-screen">
+    <main className="relative min-h-screen sm:pl-44">
       {/* Efeito tech sutil: grid de pontos no fundo */}
       <div
         className="pointer-events-none fixed inset-0 top-0 left-0 right-0 z-0 opacity-[0.04] sm:left-44"

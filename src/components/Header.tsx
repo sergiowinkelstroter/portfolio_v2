@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
   Briefcase,
   Github,
@@ -11,7 +12,7 @@ import {
   User,
   Wrench,
 } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "./ui/sheet";
 import { Button } from "./ui/button";
 
 const sections = [
@@ -31,18 +32,22 @@ export const Header = () => {
       {/* Sidebar desktop: minimalista, borda fina */}
       <aside className="fixed inset-y-0 left-0 z-10 hidden w-44 flex-col border-r border-black/10 bg-white sm:flex">
         <nav className="flex flex-col gap-0.5 px-3 py-6">
-          <a
-            href="#top"
+          <Link
+            href="/#top"
             className="mb-6 flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-black text-sm font-semibold text-white transition-smooth hover:opacity-90"
             aria-label="Início"
           >
             S
-          </a>
+          </Link>
           {sections.map((section) => (
-            <a key={section.id} href={`#${section.id}`} className={navLinkClass}>
+            <Link
+              key={section.id}
+              href={`/#${section.id}`}
+              className={navLinkClass}
+            >
               <section.icon className="h-4 w-4 shrink-0 opacity-80" />
               <span>{section.label}</span>
-            </a>
+            </Link>
           ))}
         </nav>
         <div className="mt-auto flex justify-center gap-5 border-t border-black/10 px-3 py-4">
@@ -70,13 +75,13 @@ export const Header = () => {
 
       {/* Top bar mobile */}
       <header className="sticky top-0 z-30 flex h-14 items-center justify-between border-b border-black/10 bg-white px-4 sm:hidden">
-        <a
-          href="#top"
+        <Link
+          href="/#top"
           className="flex h-8 w-8 items-center justify-center rounded-md bg-black text-sm font-semibold text-white"
           aria-label="Início"
         >
           S
-        </a>
+        </Link>
         <Sheet>
           <SheetTrigger asChild>
             <Button
@@ -91,14 +96,15 @@ export const Header = () => {
           <SheetContent side="right" className="w-[280px] border-black/10 bg-white">
             <nav className="mt-8 flex flex-col gap-0.5">
               {sections.map((section) => (
-                <a
-                  key={section.id}
-                  href={`#${section.id}`}
-                  className={navLinkClass}
-                >
-                  <section.icon className="h-4 w-4 shrink-0 opacity-80" />
-                  {section.label}
-                </a>
+                <SheetClose asChild key={section.id}>
+                  <Link
+                    href={`/#${section.id}`}
+                    className={navLinkClass}
+                  >
+                    <section.icon className="h-4 w-4 shrink-0 opacity-80" />
+                    {section.label}
+                  </Link>
+                </SheetClose>
               ))}
             </nav>
             <div className="mt-8 flex gap-5 border-t border-black/10 pt-6">
