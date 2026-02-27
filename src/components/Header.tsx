@@ -1,6 +1,5 @@
 "use client";
-import Link from "next/link";
-import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
+
 import {
   Briefcase,
   Github,
@@ -12,106 +11,125 @@ import {
   User,
   Wrench,
 } from "lucide-react";
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from "./ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { Button } from "./ui/button";
-import { usePathname } from "next/navigation";
 
 const sections = [
-  { id: "home", label: "Home", icon: Home },
-  { id: "sobre-mim", label: "Sobre Mim", icon: User },
+  { id: "top", label: "Início", icon: Home },
+  { id: "sobre-mim", label: "Sobre mim", icon: User },
   { id: "skills", label: "Habilidades", icon: Wrench },
-  { id: "projetos", label: "Projetos", icon: Briefcase },
+  { id: "experiencia", label: "Experiência", icon: Briefcase },
   { id: "contatos", label: "Contatos", icon: Mail },
 ];
 
-export const Header = () => {
-  const pathname = usePathname();
+const navLinkClass =
+  "flex items-center gap-2.5 px-2 py-1.5 text-sm font-medium transition-smooth rounded-md text-black/70 hover:text-black hover:bg-black/5";
 
+export const Header = () => {
   return (
-    <div>
-      <aside className="fixed inset-y-0 left-0 z-10 hidden w-40 flex-col border-r bg-background sm:flex">
-        <nav className="flex flex-col items-center gap-6 px-2 sm:py-5">
-          <Link
-            href="home"
-            className="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:h-10 md:w-10 md:text-base"
+    <>
+      {/* Sidebar desktop: minimalista, borda fina */}
+      <aside className="fixed inset-y-0 left-0 z-10 hidden w-44 flex-col border-r border-black/10 bg-white sm:flex">
+        <nav className="flex flex-col gap-0.5 px-3 py-6">
+          <a
+            href="#top"
+            className="mb-6 flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-black text-sm font-semibold text-white transition-smooth hover:opacity-90"
+            aria-label="Início"
           >
-            <span className="">S</span>
-          </Link>
-          <div className="flex flex-col gap-2 items-start">
-            {sections.map((section) => (
-              <Tooltip key={section.id}>
-                <TooltipTrigger asChild>
-                  <Link
-                    href={`${section.id}`}
-                    className={`flex justify-start items-center gap-2 p-2 w-full rounded-lg transition-colors   ${
-                      pathname === `/${section.id}`
-                        ? "bg-foreground text-white"
-                        : "text-muted-foreground hover:text-foreground"
-                    }`}
-                  >
-                    <section.icon className="h-5 w-5" />
-                    <span className="">{section.label}</span>
-                  </Link>
-                </TooltipTrigger>
-                {/* <TooltipContent side="right">{section.label}</TooltipContent> */}
-              </Tooltip>
-            ))}
-          </div>
+            S
+          </a>
+          {sections.map((section) => (
+            <a key={section.id} href={`#${section.id}`} className={navLinkClass}>
+              <section.icon className="h-4 w-4 shrink-0 opacity-80" />
+              <span>{section.label}</span>
+            </a>
+          ))}
         </nav>
-        <div className="flex justify-center gap-4 absolute bottom-4 left-1/2 -translate-x-1/2">
-          <Link target="_blank" href="https://github.com/sergiowinkelstroter">
-            <Github className="w-4 h-4 text-muted-foreground" />
-          </Link>
-          <Link
+        <div className="mt-auto flex justify-center gap-5 border-t border-black/10 px-3 py-4">
+          <a
             target="_blank"
+            rel="noreferrer"
+            href="https://github.com/sergiowinkelstroter"
+            className="text-black/50 transition-smooth hover:text-black"
+            aria-label="GitHub"
+          >
+            <Github className="h-4 w-4" />
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
             href="https://www.linkedin.com/in/sergio-winkelstroter/"
+            className="text-black/50 transition-smooth hover:text-black"
+            aria-label="LinkedIn"
           >
-            <Linkedin className="w-4 h-4 text-muted-foreground" />
-          </Link>
-          <Link
-            target="_blank"
-            href="https://www.instagram.com/sergiowinkelstroter.dev/"
-          >
-            <Instagram className="w-4 h-4 text-muted-foreground" />
-          </Link>
+            <Linkedin className="h-4 w-4" />
+          </a>
+
         </div>
       </aside>
-      <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6 justify-between">
-        <Link
-          href="home"
-          className="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base"
+
+      {/* Top bar mobile */}
+      <header className="sticky top-0 z-30 flex h-14 items-center justify-between border-b border-black/10 bg-white px-4 sm:hidden">
+        <a
+          href="#top"
+          className="flex h-8 w-8 items-center justify-center rounded-md bg-black text-sm font-semibold text-white"
+          aria-label="Início"
         >
-          <span className="">S</span>
-        </Link>
+          S
+        </a>
         <Sheet>
           <SheetTrigger asChild>
-            <Button size="icon" variant="outline" className="sm:hidden">
+            <Button
+              variant="outline"
+              size="icon"
+              className="h-9 w-9 border-black/20 bg-white text-black hover:bg-black/5"
+            >
               <PanelRight className="h-5 w-5" />
-              <span className="sr-only">Toggle Menu</span>
+              <span className="sr-only">Abrir menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="sm:max-w-xs">
-            <SheetClose />
-            <nav className="grid gap-6 text-lg font-medium">
+          <SheetContent side="right" className="w-[280px] border-black/10 bg-white">
+            <nav className="mt-8 flex flex-col gap-0.5">
               {sections.map((section) => (
-                <SheetClose key={section.id} asChild>
-                  <Link
-                    href={`${section.id}`}
-                    className={`flex items-center gap-4 px-2.5 ${
-                      pathname === `/${section.id}`
-                        ? "text-foreground"
-                        : "text-muted-foreground hover:text-foreground"
-                    }`}
-                  >
-                    <section.icon className="h-5 w-5" />
-                    {section.label}
-                  </Link>
-                </SheetClose>
+                <a
+                  key={section.id}
+                  href={`#${section.id}`}
+                  className={navLinkClass}
+                >
+                  <section.icon className="h-4 w-4 shrink-0 opacity-80" />
+                  {section.label}
+                </a>
               ))}
             </nav>
+            <div className="mt-8 flex gap-5 border-t border-black/10 pt-6">
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/sergiowinkelstroter"
+                className="text-black/50 hover:text-black"
+              >
+                <Github className="h-4 w-4" />
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/sergio-winkelstroter/"
+                className="text-black/50 hover:text-black"
+              >
+                <Linkedin className="h-4 w-4" />
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.instagram.com/sergiowinkelstroter.dev/"
+                className="text-black/50 hover:text-black"
+              >
+                <Instagram className="h-4 w-4" />
+              </a>
+            </div>
           </SheetContent>
         </Sheet>
       </header>
-    </div>
+    </>
   );
 };

@@ -9,59 +9,47 @@ import Link from "next/link";
 export default function Sobre() {
   return (
     <PageContainer>
-      <div className="flex justify-between w-full">
+      <div className="flex w-full justify-between px-4 pt-6 sm:px-8">
         <NavigationViewer
           data={[{ prefix: "Sobre Mim", href: "/sobre-mim" }]}
         />
-        <Link href={"/skills"} className="">
-          <ArrowRightCircle className="" />
+        <Link
+          href="/skills"
+          className="text-black/50 transition-smooth hover:text-black"
+          aria-label="Próximo: Habilidades"
+        >
+          <ArrowRightCircle className="h-5 w-5" />
         </Link>
       </div>
       <SectionContainer>
-        <h1 className="text-3xl font-bold">Sobre Mim</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
-          <div className="hidden md:flex justify-center items-center">
-            <div className=" group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:h-72 md:w-72 md:text-base">
-              <span className="text-[100px] font-bold">S</span>
+        <h1 className="text-2xl font-bold tracking-tight text-black md:text-3xl">
+          Sobre Mim
+        </h1>
+        <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12">
+          <div className="hidden items-center justify-center md:flex">
+            <div className="flex h-48 w-48 items-center justify-center rounded-lg border border-black/10 bg-black/5 text-6xl font-bold text-black">
+              S
             </div>
           </div>
-          <div className="flex-1 flex justify-center items-center flex-col">
-            <p className="text-justify">
-              Desenvolvedor Full-Stack com experiência em Nodejs, Express,
+          <div className="flex flex-col justify-center">
+            <p className="text-justify text-black/80 leading-relaxed">
+              Desenvolvedor Full-Stack com experiência em Node.js, Express,
               React.js, Next.js, TailwindCSS e muito mais. Formado em Sistemas
               para Internet. Atualmente atuo como freelancer, criando soluções
               personalizadas desde interfaces intuitivas até back-ends
-              escaláveis. Sempre em busca de novos desafios e oportunidades para
-              crescer.
+              escaláveis. Sempre em busca de novos desafios e oportunidades
+              para crescer.
             </p>
-            {/* <p className="text-justify mt-4">
-              Ao longo da minha jornada como freelancer, desenvolvi uma forte
-              compreensão das melhores práticas de desenvolvimento e um olhar
-              atento para design. Trabalho constantemente para entregar projetos
-              que não apenas atendam, mas superem as expectativas dos meus
-              clientes, independentemente do tamanho ou escopo do projeto.
-            </p> */}
-            {/* <p className="text-justify mt-4">
-              Valorizo a comunicação clara e eficaz, acreditando que a
-              colaboração próxima com clientes é essencial para o sucesso de
-              qualquer projeto. Estou sempre em busca de novos desafios e
-              oportunidades para crescer, tanto profissionalmente quanto
-              pessoalmente, mantendo-me atualizado com as últimas tendências e
-              tecnologias do setor.
-            </p> */}
-            <div className="flex w-full font-medium text-center">
-              <a
-                download={"CV.pdf"}
-                href="/cv.pdf"
-                className="mt-6 bg-primary text-white px-4 py-2 rounded-md w-full "
-              >
-                Saiba mais
-              </a>
-            </div>
+            <a
+              download="CV.pdf"
+              href="/cv.pdf"
+              className="mt-6 inline-flex w-full justify-center rounded-md border border-black/20 bg-black px-4 py-2.5 text-sm font-medium text-white transition-smooth hover:bg-black/90 sm:w-auto"
+            >
+              Baixar currículo
+            </a>
           </div>
         </div>
       </SectionContainer>
-      {/* <NextPage next="Habilidades" link={"/skills"} /> */}
     </PageContainer>
   );
 }

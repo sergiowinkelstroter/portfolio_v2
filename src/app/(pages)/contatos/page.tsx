@@ -1,78 +1,92 @@
 import { NavigationViewer } from "@/components/NavigationViewer";
 import { PageContainer } from "@/components/PageContainer";
 import { SectionContainer } from "@/components/SectionContainer";
-import { Button } from "@/components/ui/button";
-import { GithubIcon, LinkedinIcon, Mail, Phone, Pin } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, Pin } from "lucide-react";
 import Image from "next/image";
-
-import React from "react";
 
 export default function Contatos() {
   return (
     <PageContainer>
-      <NavigationViewer data={[{ prefix: "Contatos", href: "/contatos" }]} />
+      <div className="px-4 pt-6 sm:px-8">
+        <NavigationViewer data={[{ prefix: "Contatos", href: "/contatos" }]} />
+      </div>
       <SectionContainer>
-        <h1 className="text-3xl font-bold text-center">Contatos</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16 w-full">
-          <div className="flex flex-col  items-center">
-            <h3 className="text-xl font-bold">Informações de contato</h3>
-            <div className="flex flex-col gap-4 mt-8">
-              <div className="flex gap-2 items-center">
-                <Mail className="w-10 h-10" />
+        <h1 className="text-center text-2xl font-bold tracking-tight text-black md:text-3xl">
+          Contatos
+        </h1>
+        <div className="mt-10 grid w-full grid-cols-1 gap-10 md:grid-cols-2">
+          <div className="flex flex-col items-center">
+            <h2 className="text-lg font-semibold text-black">
+              Informações de contato
+            </h2>
+            <ul className="mt-6 flex flex-col gap-5">
+              <li className="flex items-center gap-3">
+                <Mail className="h-5 w-5 shrink-0 text-black/60" />
                 <div className="flex flex-col">
-                  <span className="font-bold text-lg">Email</span>
-                  <span className="text-sm">winksousa0@gmail.com</span>
+                  <span className="text-sm font-medium text-black">Email</span>
+                  <a
+                    href="mailto:winksousa0@gmail.com"
+                    className="text-sm text-black/70 hover:underline"
+                  >
+                    winksousa0@gmail.com
+                  </a>
                 </div>
-              </div>
-              <div className="flex gap-2 items-center">
-                <Phone className="w-10 h-10" />
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="h-5 w-5 shrink-0 text-black/60" />
                 <div className="flex flex-col">
-                  <span className="font-bold text-lg">Telefone</span>
-                  <span className="text-sm">(99) 99152-9825</span>
+                  <span className="text-sm font-medium text-black">Telefone</span>
+                  <span className="text-sm text-black/70">(99) 99152-9825</span>
                 </div>
-              </div>
-              <div className="flex gap-2 items-center">
-                <LinkedinIcon className="w-10 h-10" />
+              </li>
+              <li className="flex items-center gap-3">
+                <Linkedin className="h-5 w-5 shrink-0 text-black/60" />
                 <div className="flex flex-col">
-                  <span className="font-bold text-lg">Linkedin</span>
+                  <span className="text-sm font-medium text-black">LinkedIn</span>
                   <a
                     target="_blank"
+                    rel="noreferrer"
                     href="https://www.linkedin.com/in/sergio-winkelstroter/"
-                    className="text-sm"
+                    className="text-sm text-black/70 hover:underline"
                   >
                     /in/sergio-winkelstroter
                   </a>
                 </div>
-              </div>
-              <div className="flex gap-2 items-center">
-                <GithubIcon className="w-10 h-10" />
+              </li>
+              <li className="flex items-center gap-3">
+                <Github className="h-5 w-5 shrink-0 text-black/60" />
                 <div className="flex flex-col">
-                  <span className="font-bold text-lg">GitHub</span>
+                  <span className="text-sm font-medium text-black">GitHub</span>
                   <a
                     target="_blank"
+                    rel="noreferrer"
                     href="https://github.com/sergiowinkelstroter"
-                    className="text-sm"
+                    className="text-sm text-black/70 hover:underline"
                   >
                     github.com/sergiowinkelstroter
                   </a>
                 </div>
-              </div>
-              <div className="flex gap-2 items-center">
-                <Pin className="w-10 h-10" />
+              </li>
+              <li className="flex items-center gap-3">
+                <Pin className="h-5 w-5 shrink-0 text-black/60" />
                 <div className="flex flex-col">
-                  <span className="font-bold text-lg">Localização</span>
-                  <span className="text-sm">Açailândia-MA</span>
+                  <span className="text-sm font-medium text-black">
+                    Localização
+                  </span>
+                  <span className="text-sm text-black/70">Açailândia-MA</span>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
-          <Image
-            src="/contato.png"
-            alt=""
-            width={800}
-            height={800}
-            className="hidden md:block"
-          />
+          <div className="hidden justify-center md:flex">
+            <Image
+              src="/contato.png"
+              alt=""
+              width={400}
+              height={400}
+              className="rounded-lg border border-black/5 object-cover"
+            />
+          </div>
         </div>
       </SectionContainer>
     </PageContainer>

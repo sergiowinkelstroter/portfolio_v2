@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Header } from "@/components/Header";
 
-const inter = Inter({ subsets: ["latin"] });
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-dm-sans",
+});
 
 export const metadata: Metadata = {
-  title: "Portfolio || Sergio Winkelstroter",
-  description: "",
+  title: "Sergio Winkelstroter | Desenvolvedor Full-stack",
+  description: "Portfólio e currículo de Sergio Winkelstroter — Desenvolvedor Full-stack",
   icons: {
     icon: "/icon.svg",
   },
@@ -21,9 +25,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>
+      <body className={`min-h-screen bg-white font-sans text-black antialiased ${dmSans.className}`}>
         <TooltipProvider>
-          {" "}
           <Header />
           {children}
         </TooltipProvider>

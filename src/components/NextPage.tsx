@@ -5,10 +5,10 @@ export function NextPage({ next, link }: { next: string; link: string }) {
   return (
     <Link
       href={link}
-      className="hidden sm:flex gap-2 p-2 px-4 border border-black rounded-2xl w-[150px] absolute bottom-5 right-5"
+      className="absolute bottom-6 right-6 hidden gap-2 rounded-md border border-black/20 bg-white px-4 py-2 text-sm font-medium text-black transition-smooth hover:border-black/40 hover:bg-black/5 sm:flex"
     >
       <span>{next}</span>
-      <ArrowRight />
+      <ArrowRight className="h-4 w-4" />
     </Link>
   );
 }

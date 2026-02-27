@@ -12,7 +12,6 @@ import {
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiPrisma } from "react-icons/si";
 import { FaDocker } from "react-icons/fa";
-import { SiMongodb } from "react-icons/si";
 import { SiPostgresql } from "react-icons/si";
 
 export const skills = [
@@ -61,6 +60,10 @@ export const skills = [
         icon: SiExpress,
       },
       {
+        title: "Fastify",
+        icon: FaNodeJs,
+      },
+      {
         title: "Prisma",
         icon: SiPrisma,
       },
@@ -69,12 +72,12 @@ export const skills = [
         icon: FaDocker,
       },
       {
-        title: "MongoDB",
-        icon: SiMongodb,
-      },
-      {
         title: "PostgreSQL",
         icon: SiPostgresql,
+      },
+      {
+        title: "Nginx",
+        icon: FaDocker,
       },
     ],
   },

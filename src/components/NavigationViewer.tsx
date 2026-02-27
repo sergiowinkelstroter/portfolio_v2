@@ -1,4 +1,6 @@
 "use client";
+
+import React from "react";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -6,7 +8,6 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import React from "react";
 
 interface NavigationViewerProps {
   prefix: string;
@@ -24,19 +25,18 @@ export const NavigationViewer = ({
 }: NavigationViewerData) => {
   return (
     <Breadcrumb>
-      <BreadcrumbList>
+      <BreadcrumbList className="text-sm text-black/60">
         <BreadcrumbItem>
           <BreadcrumbLink href={home_link}>Home</BreadcrumbLink>
         </BreadcrumbItem>
-        {data &&
-          data.map((item, index) => (
-            <React.Fragment key={index}>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink href={item.href}>{item.prefix}</BreadcrumbLink>
-              </BreadcrumbItem>
-            </React.Fragment>
-          ))}
+        {data?.map((item, index) => (
+          <React.Fragment key={index}>
+            <BreadcrumbSeparator />
+            <BreadcrumbItem>
+              <BreadcrumbLink href={item.href}>{item.prefix}</BreadcrumbLink>
+            </BreadcrumbItem>
+          </React.Fragment>
+        ))}
       </BreadcrumbList>
     </Breadcrumb>
   );
